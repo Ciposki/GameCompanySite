@@ -1,22 +1,43 @@
+/* #5CA4A9
+    	#ed6a5a
+*/
 *{
     margin: 0;
     padding: 0;
 }
-body{
+@font-face {
+    font-family: Fifties;
+    font-weight: normal;
+    src: url(VVDS-Fifties-SExp-Reg.otf);
+}
+@font-face {
+    font-family: Fifties;
+    font-weight: bold;
+    src: url(T18356-OT/VVDS-Fifties-Exp-Bold.otf);
+}
+body{ 
+
    display: flex;
    flex-direction: column;
    scroll-behavior: smooth;
    justify-content: center;
    align-items: center;
+   font-family: Fifties;
+   gap: 4vh;
+   margin-top: 5vw;
 }
+
 .barra
 {
+    background-color: #5CA4A9;
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100vw;
     height: 5vh;
     box-shadow:  0px 2px 5px rgb(0, 0, 0);
+    top:0
 }
 a:link{
     text-decoration: none;
@@ -29,16 +50,38 @@ a:visited{
     
 }
 .info{
-    border: 1px solid red;
     width: 90vw;
     height: 30vh;
     display: flex;
-    
     justify-content: space-around;
     align-items: center;
-    
 }
 .info h1{
     font-size: 8vw;
-    
+    font-family: fifties;
+    font-weight: bold;
+}
+hr{
+    display: flex;
+    position: relative;
+    height: 0.01vh;
+    width: 100vw;
+}
+.gameSection{
+    display: grid;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    grid-template-columns: auto auto auto;
+}
+
+.game h2 a{
+    color: #ed6a5a;
+}
+.game p{
+    color: #5CA4A9;
+}
+.game img{
+    width: 20vw;
 }
