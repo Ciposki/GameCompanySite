@@ -1,0 +1,86 @@
+body{
+    height:100vh;
+    width:100vw;
+    background-color: #131313;
+    margin:0rem;
+    overflow:hidden;
+}
+
+#games{
+    /* Makes the container fill the screen and alligns it vertically */
+    height:100vh;
+    display: flex;
+    align-items: center;
+
+}
+#games-items{
+    /* Moves it to the right */
+    margin-left:clamp(4rem,20vw,4rem);
+    position: relative;
+    /* Positions it above the background*/
+    z-index: 2;
+}
+/*When hovering turns down the opacity of all the links*/
+#games-items:hover >.games-text{
+    opacity: 0.3;
+}
+/*# turns up the opacity of the current link */
+#games-items:hover >.games-text:hover{
+opacity: 1;
+}
+.games-text{
+    color:white;
+    /* Increases the font size */
+    font-size:clamp(5rem, 1.5vw,3rem);
+    /* Stacks them vertically*/
+    display: block;
+    /* Removes the underlining*/
+    text-decoration: none;
+    /* Increases the space between links*/
+    padding: clamp(0.25rem, 1.5vw,3rem) 0rem;
+    /* Transition for a change in opacity*/
+    transition: opacity 400ms ease;
+}
+
+#games-bg-pattern{
+
+    height: 100vh;
+    width: 100vw;
+    /* Creates a grid pattern*/
+    background-image: radial-gradient(
+    rgb(255,255,255,0.1) 9%,
+    transparent 9%
+    );
+    background-position: 0 0;
+    background-size: 12vmin 12vmin;
+    /* Positions it below the text*/
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 1;
+    transition: opacity 800ms ease,
+background-size 800ms ease,background-position 800ms ease;
+}
+/* When hovering over the text it modifies the properties of the background (its sibling)*/
+#games-items:hover ~ #games-bg-pattern{
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+}
+
+#games[data-active-index="0"] > #games-bg-pattern {
+    background-position: 0% -25%;
+}
+#games[data-active-index="1"] > #games-bg-pattern {
+    background-position: 0% -50%;
+}
+#games[data-active-index="2"] > #games-bg-pattern {
+    background-position: 0% -75%;
+}
+#games[data-active-index="3"] > #games-bg-pattern {
+    background-position: 0% -100%;
+}
+.games-image{
+    position: absolute;
+    scale: 50%;
+    opacity: 0;
+}
