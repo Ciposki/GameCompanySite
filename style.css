@@ -15,16 +15,16 @@
     font-weight: bold;
     src: url(T18356-OT/VVDS-Fifties-Exp-Bold.otf);
 }
-body{ 
+body{
 
-   display: flex;
-   flex-direction: column;
-   scroll-behavior: smooth;
-   justify-content: center;
-   align-items: center;
-   font-family: Fifties;
-   gap: 4vh;
-   margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    justify-content: center;
+    align-items: center;
+    font-family: Fifties;
+    gap: 4vh;
+    margin-top: 5vw;
 }
 
 .barra
@@ -39,17 +39,19 @@ body{
     box-shadow:  0px 2px 5px rgb(0, 0, 0);
     top:0
 }
-a:link{
+.barra a:link{
     text-decoration: none;
     color: black;
 }
-a:visited{
+.barra a:visited{
     color: black;
 }
 .logo{
-    
+
 }
+
 .info{
+
     width: 90vw;
     height: 30vh;
     display: flex;
@@ -57,23 +59,41 @@ a:visited{
     align-items: center;
 }
 .info h1{
-    font-size: 8vw;
     font-family: fifties;
     font-weight: bold;
+}
+
+.name{
+    font-size: 5vw;
+    display: flex;
+    flex-direction: column;
+    line-height: 8vh;
+    width: 20vw;
+}
+.Studios{
+    font-size: 3vw;
 }
 hr{
     display: flex;
     position: relative;
     height: 0.01vh;
-    width: 100vw;
+    width: 98vw;
 }
 .gameSection{
     display: grid;
-    width: 100vw;
+    width: 90vw;
     align-items: center;
     justify-content: center;
     gap: 5vw;
+
     grid-template-columns: auto auto auto;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 19vw;
 }
 
 .game h2 a{
@@ -84,4 +104,25 @@ hr{
 }
 .game img{
     width: 20vw;
+}
+footer {
+    display: flex;
+    background-color:#5CA4A9;
+    width: 100%;
+    height: 20vw;
+    justify-content: space-evenly;
+}
+footer h1{
+    color: #ed6a5a;
+}
+footer h2{
+    color: white;
+}
+footer a{
+    color: white;
+    text-decoration: underline;
+}
+footer a:hover{
+    font-size: 1.5vw;
+    transition: cubic-bezier();
 }
