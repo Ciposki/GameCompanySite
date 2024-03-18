@@ -1,0 +1,12 @@
+/* Webfont: Stara-MediumItalic */@font-face {
+    font-family: 'StaraMedIta';
+    src: url('Stara-MediumItalic.eot'); /* IE9 Compat Modes */
+    src: url('Stara-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Stara-MediumItalic.woff') format('woff'), /* Modern Browsers */
+         url('Stara-MediumItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('Stara-MediumItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

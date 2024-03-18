@@ -1,37 +1,47 @@
-/* #5CA4A9
-    	#ed6a5a
+/* #17161a
+    	#d4cbbf
 */
 *{
     margin: 0;
     padding: 0;
-    transition: all .3s ease;
+    transition: all 0.2s ease;
     scroll-behavior: smooth;
 }
 @font-face {
-    font-family: Fifties;
+    font-family: Stara;
     font-weight: normal;
-    src: url(VVDS-Fifties-SExp-Reg.otf);
+    src: url(stara-sans-serif-font-2023-11-27-04-56-32-utc/OpenType-PS/Stara-Medium.otf);
 }
 @font-face {
-    font-family: Fifties;
+    font-family: Stara;
     font-weight: bold;
-    src: url(T18356-OT/VVDS-Fifties-Exp-Bold.otf);
+    src: url(stara-sans-serif-font-2023-11-27-04-56-32-utc/OpenType-PS/Stara-Black.otf);
+}
+@font-face {
+    font-family: Strong;
+    font-weight: normal;
+    src: url(strong-elegant-serif-font-typeface-2024-01-11-18-57-50-utc/Strong.ttf);
+}
+
+@font-face {
+    font-family: bug;
+    font-weight: normal;
+    src: url(corepix-glitch-pixel-serif-font-2024-02-15-19-40-00-utc/Corepix/OpenType-TT/Corepix.ttf)
 }
 body{
-
+    background-color: #17161a;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Fifties;
-    gap: 4vh;
-    margin-top: 5vw;
+
+
 }
 
 .barra
 {
     z-index: 999;
-    background-color: #5CA4A9;
+    background-color: #d4cbbf;
     position: fixed;
     display: flex;
     justify-content: space-around;
@@ -43,43 +53,70 @@ body{
     font-weight: bold;
 }
 .barra a:link{
+    display: flex;
     text-decoration: none;
-    color: white;
+    color: #17161a;
+    width: 8vw;
+    height: 4vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
 }
 .barra a:hover{
-    font-size: 1.5vw;
-    color: #ed6a5a;
-    text-decoration: underline;
+    
+    color: #d4cbbf;
+    border-radius: 30px;
+    background-color: #17161a;
 }
-.barra a:visited{
-    color: white;
+a:visited{
+    color: #17161a;
 }
 .logo{
 
 }
 
 .info{
-
+    margin-top: 5vh;
     width: 90vw;
-    height: 30vh;
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    gap:3vh;
 }
 .info h1{
-    font-family: fifties;
-    font-weight: bold;
+    font-family: Strong;
+    color: #d4cbbf;
 }
 
 .name{
-    font-size: 5vw;
+    color: #d4cbbf;
+    font-size: 1vw;
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    margin-top: 2vh;
+    justify-content: center;
+    align-content: center;
+    gap: 1vw;
+}
+.name h5{
+    align-self: flex-end;
+}
+
+
+.info .we{
     display: flex;
     flex-direction: column;
-    line-height: 8vh;
+    border: 1px red solid;
     width: 20vw;
+    margin-top: 50vh;
+    
+    font-size: 1.5vw;
 }
-.Studios{
-    font-size: 3vw;
+
+.info .we .left{
+    align-self: flex-end;
 }
 hr{
     display: flex;
@@ -132,6 +169,17 @@ hr{
     align-items: center;
     justify-content: center;
 
+}
+.game .imga .more{
+    position: absolute;
+    color: white;
+    width: 19vw;
+    height: 19vw;
+    background-color:black;
+    opacity: 0;
+}
+.game .imga .more:hover{
+    opacity: 0.5;
 }
 .game .imga img{
     width: 19vw;
