@@ -28,6 +28,89 @@
     font-weight: normal;
     src: url(corepix-glitch-pixel-serif-font-2024-02-15-19-40-00-utc/Corepix/OpenType-TT/Corepix.ttf)
 }
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    url('Grotesque Pro/BasisGrotesquePro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eiko';
+    url('Eiko/PPEiko-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+
+
+
+
 body{
     background-color: #17161a;
     display: flex;
