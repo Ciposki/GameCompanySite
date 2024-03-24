@@ -28,8 +28,13 @@
     font-weight: normal;
     src: url(corepix-glitch-pixel-serif-font-2024-02-15-19-40-00-utc/Corepix/OpenType-TT/Corepix.ttf)
 }
+
+@font-face {
+    font-family: Apple;
+    src: url(AppleGaramond.ttf);
+}
 body{
-    background-color: #17161a;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,65 +42,84 @@ body{
 
 
 }
-
-.barra
-{
-    z-index: 999;
-    background-color: #d4cbbf;
-    position: fixed;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100vw;
-    height: 5vh;
-    box-shadow:  0px 2px 5px rgb(0, 0, 0);
-    top:0;
-    font-weight: bold;
+.background{
+    position: absolute;
+    z-index: -99;
+    top: 0;
+    height: 110vh;
+    width: 100%;
+    overflow: hidden;
+    
 }
-.barra a:link{
+
+
+.Hide{
+    opacity: 0;
+}
+
+.Home{
     display: flex;
-    text-decoration: none;
-    color: #17161a;
-    width: 8vw;
-    height: 4vh;
+    height: 100vh;
+    width: 100%;
+}
+
+.navigator{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    margin-left: 3vw;
     align-items: center;
     justify-content: center;
-    font-size: 1.5vw;
 }
-.barra a:hover{
-    
-    color: #d4cbbf;
-    border-radius: 30px;
-    background-color: #17161a;
-}
-a:visited{
-    color: #17161a;
-}
-.logo{
 
+.navigator button{
+    border-radius: 30px;
+    height: 3vw;
+    width: 10vw;
+    background-color: rgba(255, 255, 255, 0.188);
+    color: white;
+    font-family: Stara;
+    border-style:none;
+    z-index: 999;
+}
+
+.Home .navigator button:hover{
+    border: 0.1vw solid white;
+    background-color: rgba(28, 28, 28, 0.188);
 }
 
 .info{
-    margin-top: 5vh;
+    margin-top: 0vh;
     width: 90vw;
     height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap:3vh;
-}
-.info h1{
+    color: white;
     font-family: Strong;
-    color: #d4cbbf;
+    
+}
+
+.info h1{
+    font-weight: lighter;
+}
+
+.info p{
+    width: 20vw;
+    margin-top: 12vh;
+    margin-left: 30vw;
+    font-family: Apple;
+    text-align: justify;
 }
 
 .name{
-    color: #d4cbbf;
-    font-size: 1vw;
+    color: white;
+    font-size: 0.8vw;
     display: flex;
     flex-direction: row;
     width: 80vw;
-    margin-top: 2vh;
+    margin-top: 0;
     justify-content: center;
     align-content: center;
     gap: 1vw;
@@ -108,11 +132,10 @@ a:visited{
 .info .we{
     display: flex;
     flex-direction: column;
-    border: 1px red solid;
-    width: 20vw;
-    margin-top: 50vh;
+    width: 40vw;
+    margin-top: 20vh;
     
-    font-size: 1.5vw;
+    font-size: 4vw;
 }
 
 .info .we .left{
@@ -130,8 +153,9 @@ hr{
     align-items: center;
     justify-content: center;
     gap: 5vw;
-
+    position: absolute;
     grid-template-columns: auto auto auto;
+
 }
 
 .game{
@@ -205,7 +229,7 @@ footer {
     width: 100%;
     height: 20vw;
     justify-content: space-evenly;
-    
+    margin-top: 10vw;
 }
 footer h1{
     color: #ed6a5a;
