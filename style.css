@@ -31,77 +31,77 @@
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-MediumItalic.ttf') format('truetype');
+    src: url('Grotesque Pro/BasisGrotesquePro-MediumItalic.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-Regular.ttf') format('truetype');
+    src:url('Grotesque Pro/BasisGrotesquePro-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-BoldItalic.ttf') format('truetype');
+    src:url('Grotesque Pro/BasisGrotesquePro-BoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-Italic.ttf') format('truetype');
+    src:url('Grotesque Pro/BasisGrotesquePro-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-BlackItalic.ttf') format('truetype');
+    src:url('Grotesque Pro/BasisGrotesquePro-BlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-Black.ttf') format('truetype');
+    src:url('Grotesque Pro/BasisGrotesquePro-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-LightItalic.ttf') format('truetype');
+    src:url('Grotesque Pro/BasisGrotesquePro-LightItalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-Light.ttf') format('truetype');
+    src:url('Grotesque Pro/BasisGrotesquePro-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-Bold.ttf') format('truetype');
+    src:url('Grotesque Pro/BasisGrotesquePro-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Basis Grotesque Pro';
-    url('Grotesque Pro/BasisGrotesquePro-Medium.ttf') format('truetype');
+    src:url('Grotesque Pro/BasisGrotesquePro-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Eiko';
-    url('Eiko/PPEiko-Variable.ttf') format('truetype');
+    src:url('Eiko/PPEiko-Variable.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -113,21 +113,18 @@
 
 body{
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #000814;
 
 
 }
 .background{
     position: absolute;
-    z-index: -99;
+    z-index: 0;
     top: 0;
-    height: 110vh;
-    width: 100%;
+    height: 9vh;
+    width: 99%;
     overflow: hidden;
-    
+
 }
 
 
@@ -137,8 +134,9 @@ body{
 
 .Home{
     display: flex;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
+    border: solid 1px red;
 }
 
 .navigator{
@@ -148,6 +146,7 @@ body{
     margin-left: 3vw;
     align-items: center;
     justify-content: center;
+    border: solid 1px red;
 }
 
 .navigator button{
@@ -233,7 +232,10 @@ hr{
     gap: 5vw;
     position: absolute;
     grid-template-columns: auto auto auto;
-
+    border: solid 1px red;
+    height: 90vh;
+    left: 0;
+    top: 0;
 }
 
 .game{
