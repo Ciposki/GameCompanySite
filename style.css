@@ -109,19 +109,21 @@
 }
 
 
-
+html{height: 100%; overflow: hidden}
 
 body{
     background-color: white;
     background-color: #000814;
-
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 
 }
 .background{
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     top: 0;
-    height: 9vh;
+    height: 100vh;
     width: 99%;
     overflow: hidden;
 
@@ -136,7 +138,7 @@ body{
     display: flex;
     height: 90vh;
     width: 100%;
-    border: solid 1px red;
+
 }
 
 .navigator{
@@ -146,7 +148,6 @@ body{
     margin-left: 3vw;
     align-items: center;
     justify-content: center;
-    border: solid 1px red;
 }
 
 .navigator button{
@@ -211,18 +212,13 @@ body{
     flex-direction: column;
     width: 40vw;
     margin-top: 20vh;
-    
+    text-shadow: 2px 2px 4px #000000;
     font-size: 4vw;
+    z-index: 2;
 }
 
 .info .we .left{
     align-self: flex-end;
-}
-hr{
-    display: flex;
-    position: relative;
-    height: 0.01vh;
-    width: 98vw;
 }
 .gameSection{
     display: grid;
@@ -232,10 +228,11 @@ hr{
     gap: 5vw;
     position: absolute;
     grid-template-columns: auto auto auto;
-    border: solid 1px red;
+    
     height: 90vh;
     left: 0;
     top: 0;
+    z-index: -2;
 }
 
 .game{
@@ -292,7 +289,7 @@ hr{
 }
 
 .footerclass{
-    width: 100%;
+    width: 90%;
     
 }
 
@@ -306,7 +303,7 @@ footer {
     background-repeat: no-repeat;
     padding-top: 10vw;
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 20vw;
     justify-content: space-evenly;
     margin-top: 10vw;
