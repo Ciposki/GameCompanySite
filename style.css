@@ -101,10 +101,8 @@
 
 @font-face {
     font-family: 'Eiko';
-    src:url('Eiko/PPEiko-Variable.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
+    src:url('Eiko/PPEiko-Variable.ttf') format("truetype-variations");
+    font-weight: 100;
 
 }
 
@@ -117,7 +115,7 @@ body{
     text-align: center;
     display: flex;
     flex-direction: column;
-
+    font-family: Eiko;
 }
 .background{
     position: absolute;
@@ -126,12 +124,14 @@ body{
     height: 100vh;
     width: 99%;
     overflow: hidden;
-
+    
 }
+
 
 
 .Hide{
     opacity: 0;
+    z-index: -999;
 }
 
 .Home{
@@ -201,6 +201,7 @@ body{
     justify-content: center;
     align-content: center;
     gap: 1vw;
+    width: 100%;
 }
 .name h5{
     align-self: flex-end;
@@ -336,3 +337,22 @@ footer a:hover{
     justify-content: space-evenly;
     background-color: #5CA4A9;
 }
+
+.itlies{
+    position: absolute;
+    display: flex;
+    border: 1px red solid;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: Eiko;
+    
+}
+ .itlies h1{
+    margin-top: 60vh;
+    margin-left: 30vw;
+    font-size: 3vw;
+    text-align: justify;
+    font-variation-settings: "wght" 100;
+
+ }
