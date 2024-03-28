@@ -29,12 +29,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const gamesect= document.querySelector(".gameSection")
     const itlies = document.querySelector(".itlies")
 
+    const cursor= document.querySelector('.cursor');
+
+    const positionElement = (e)=> {
+        const mouseY = e.clientY;
+        const mouseX = e.clientX;
+         
+        
+        cursor.style.transform = `translate3d(${mouseX-10}px, ${mouseY-5}px, 0)`;
+       
+
+      }
+
+    window.addEventListener('mousemove', positionElement)
+
+    
+
     Button.forEach(element => {
         element.addEventListener("mouseover", () => {
             HoverButton(element);
+            cursor.setAttribute('style','background-color:rgba(8, 8, 8, 1)');
+            cursor.style.border = "2px solid white";
+            cursor.style.width = "2vw"
+            cursor.style.height = "2vw"
+            
         });
         element.addEventListener("mouseout", () => {
             OutButton();
+            cursor.setAttribute('style','background-color:white');
+            cursor.style.border = "0px solid white";
+            cursor.style.width = "1vw"
+            cursor.style.height = "1vw"
         });    
     });
 
