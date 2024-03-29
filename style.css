@@ -2,13 +2,16 @@
     	#d4cbbf
 */
 *{
+
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     cursor: none;
+    transform: all 0.2s;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+
 }
 @font-face {
     font-family: Stara;
@@ -128,8 +131,15 @@
 
 .animateInfo{
     animation: transformation  1s ease-out;
-    animation-delay: 5s;
     animation-fill-mode: forwards;
+
+}
+
+.animateback{
+    animation: transformation  1s ease-out;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+
 }
 
 html{height: 100%; overflow: hidden}
@@ -149,7 +159,7 @@ body{
   border-radius: 50%;
   transition: width ease 0.5s,height ease 0.5s;
   z-index: 3;
-    mix-blend-mode: difference;
+  mix-blend-mode: difference;
 }
 
 .background{
@@ -172,7 +182,7 @@ body{
 
 .Hide{
     opacity: 0;
-    z-index: -999;
+    z-index: -999999;
 }
 
 .Home{
@@ -351,7 +361,7 @@ body{
 
 
 .itlies{
-   
+    background-color: #17161a;
     position: absolute;
     display: flex;
     flex-direction: column;
