@@ -48,10 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
     Button.forEach(element => {
         element.addEventListener("mouseover", () => {
             HoverButton(element);
-            cursor.setAttribute('style','background-color:rgba(8, 8, 8, 1)');
-            cursor.style.border = "2px solid white";
-            cursor.style.width = "2vw"
-            cursor.style.height = "2vw"
+            cursor.setAttribute('style','background-color:transparent');
+            cursor.style.border = "3px solid white";
+            cursor.style.width = "1.5vw"
+            cursor.style.height = "1.5vw"
             
         });
         element.addEventListener("mouseout", () => {
