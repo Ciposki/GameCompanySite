@@ -149,6 +149,7 @@ body{
   border-radius: 50%;
   transition: width ease 0.5s,height ease 0.5s;
   z-index: 3;
+    mix-blend-mode: difference;
 }
 
 .background{

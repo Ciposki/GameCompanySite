@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    cursor: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+body{
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Eiko;
+}
+
+.Data{
+    display: flex;
+    flex-direction: column;
+}
+.Gameinfo{
+    color: white;
+}
+.Data_text{
+    color: white;
+}
+#download_bar{
+    border-radius: 15px;
+    background-color: red;
+    height: 5vh;
+    width: 90vh;
+    margin: auto;
+}
+#view_bar{
+
+    border-radius: 15px;
+    background-color: red;
+    height: 5vh;
+    width: 90vh;
+    margin: auto;
+}

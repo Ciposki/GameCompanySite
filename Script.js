@@ -1,6 +1,8 @@
 async function getdata(){
+    //just a precaution
+    let debug_url ="https://itch.io/api/1/ZQ2JiAnQXLKUv4vJB4ReFB9UvRpmGm3Kmji7hTA7/my-games"
     //accessing the itch api. We HAVE TO use a proxy otherwise we get CORS errors
-    let url ="https://corsproxy.io/?https%3A%2F%2Fitch.io%2Fapi%2F1%2FZQ2JiAnQXLKUv4vJB4ReFB9UvRpmGm3Kmji7hTA7%2Fmy-games"
+    let url="https://api.codetabs.com/v1/proxy/?quest=https://itch.io/api/1/ZQ2JiAnQXLKUv4vJB4ReFB9UvRpmGm3Kmji7hTA7/my-games"
     //awaiting a response from the server
     let response = await fetch(url);
     //turning into a json
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cursor.style.border = "0px solid white";
             cursor.style.width = "1vw"
             cursor.style.height = "1vw"
-        });    
+        });
     });
 
     Button.forEach(button => {
