@@ -132,13 +132,14 @@
 .animateInfo{
     animation: transformation  1s ease-out;
     animation-fill-mode: forwards;
-
+    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
 }
 
 .animateback{
     animation: transformation  1s ease-out;
     animation-fill-mode: forwards;
     animation-direction: reverse;
+    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
 
 }
 
