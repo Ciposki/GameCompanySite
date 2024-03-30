@@ -25,6 +25,7 @@ async function getdata(){
     }
 }
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const Button = document.querySelectorAll("button");
     const home = document.querySelectorAll("#home");
@@ -36,7 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     let open=false
-
+    if(background.classList.contains("animateonce")){
+        background.addEventListener("animationend", () => {
+                footer.classList.remove("Hide")
+                background.classList.remove("animateonce")
+        });
+    }
     const positionElement = (e)=> {
         const mouseY = e.clientY;
         const mouseX = e.clientX;

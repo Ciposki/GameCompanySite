@@ -162,6 +162,13 @@
 
 }
 
+.animateonce{
+    animation: startanim  3s ease-out;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    animation-delay: 5s;
+}
+
 
 html{height: 100%; overflow: hidden}
 
