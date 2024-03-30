@@ -31,6 +31,8 @@ body{
     height: 5vh;
     width: 90vh;
     margin: auto;
+    transition: width 330ms ease-in-out;
+    animation-timing-function: cubic-bezier(1.000, 0.010, 1.000, 0.045);
 }
 #view_bar{
 
@@ -39,4 +41,6 @@ body{
     height: 5vh;
     width: 90vh;
     margin: auto;
+    transition: width 330ms ease-in-out;
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
 }

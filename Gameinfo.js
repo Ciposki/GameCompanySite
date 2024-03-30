@@ -27,13 +27,10 @@ async function getdata(){
         }
     }
 }
-
-//after the page loads
-document.addEventListener('DOMContentLoaded', function() {
-    //waits for getdata to finish
+function setdata(){
     getdata().then(
         function(data){
-            
+
             let download_counter=document.getElementById("download_counter")
             download_counter.textContent=data[0];
             let view_counter=document.getElementById("view_counter")
@@ -51,10 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         }
     )
-
-
-})
-
+}
+//after the page loads
+document.addEventListener('DOMContentLoaded',setdata);
+//every 2 seconds
+setInterval(setdata, 2000);
 function set_flash(){
     const cursor= document.querySelector('.cursor');
 
