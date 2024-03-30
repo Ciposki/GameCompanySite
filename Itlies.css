@@ -13,11 +13,41 @@ body{
     display: flex;
     flex-direction: column;
     font-family: Eiko;
+
 }
+@keyframes adios {
+    from{
+        scale:100%;
+        opacity: 100;
+    }
+    to{
+        scale:0;
+        opacity: 0;
+    }
+}
+.animate_adios{
+    animation: adios  0.8s ease-out;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+}
+
+.cursor{
+    position: fixed;
+    width: 1vw;
+    height: 1vw;
+    background-color: white;
+    border-radius: 50%;
+    transition: width ease 0.5s,height ease 0.5s;
+    z-index: 3;
+    mix-blend-mode: difference;
+}
+
 
 .Data{
     display: flex;
     flex-direction: column;
+    margin-bottom: 10vh;
 }
 .Gameinfo{
     color: white;
@@ -43,4 +73,13 @@ body{
     margin: auto;
     transition: width 330ms ease-in-out;
     animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+}
+#bro{
+    position: absolute;
+    top:800px;
+    right: 650px;
+    width: 30vw;
+    height: 30vh;
+
+
 }
