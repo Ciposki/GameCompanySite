@@ -28,10 +28,12 @@ async function getdata(){
 document.addEventListener('DOMContentLoaded', function() {
     const Button = document.querySelectorAll("button");
     const home = document.querySelectorAll("#home");
-    const gamesect= document.querySelector(".gameSection")
-    const itlies = document.querySelector(".itlies")
-    const background = document.querySelector(".background")
+    const gamesect= document.querySelector(".gameSection");
+    const itlies = document.querySelector(".itlies");
+    const background = document.querySelector(".background");
     const cursor= document.querySelector('.cursor');
+    const footer = document.querySelector('footer');
+
 
     let open=false
 
@@ -45,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       }
 
-    window.addEventListener('mousemove', positionElement)
+    window.addEventListener('mousemove', positionElement);
 
 
 
     Button.forEach(element => {
         element.addEventListener("mouseover", () => {
-            if (!element.classList.contains("Hide")){
+            if (!element.classList.contains("Hide") && !open){
             HoverButton(element);
             cursor.setAttribute('style','background-color:transparent');
             cursor.style.border = "3px solid white";
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         element.addEventListener("mouseout", () => {
-            if (!element.classList.contains("Hide")){
+            if (!element.classList.contains("Hide") && !open){
             OutButton();
             cursor.setAttribute('style','background-color:white');
             cursor.style.border = "0px solid white";
@@ -88,10 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function buttonclick(buttons){
-
-
-
-        if(buttons!=Button[3] && open == false){
+        if(buttons!=Button[0] && open == false){
                 open=false;
             Button.forEach(buttonElement => {
                 if(buttons == buttonElement){
@@ -104,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
-
-        if (buttons == Button[1]&& open == false){
+        current = document.querySelector(".Current")
+        if (buttons == Button[3]&& open == false){
             for(i=0;i<home.length;i++){
                 if(!home[i].classList.contains("Hide")){
                     home[i].classList.add("Hide");
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
             gamesect.classList.remove("Hide");
             itlies.classList.add("Hide")
 
-        }else if(buttons == Button[0]&& open == false){
+        }else if(buttons == Button[1]&& open == false){
             for(i=0;i<home.length;i++){
                 if(home[i].classList.contains("Hide")){
                     home[i].classList.remove("Hide");
@@ -132,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             gamesect.classList.add("Hide");
             itlies.classList.remove("Hide");
-        }else if(buttons==Button[3]){
+        }else if(buttons==Button[0]){
             if(open){
                 background.classList.remove("animateInfo");
                 gamesect.classList.remove("animateInfo");
@@ -142,11 +141,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 gamesect.classList.add("animateback");
                 itlies.classList.add("animateback");
                 // Da cambiare con la gerarchia
-                for(i =0;i<3;i++){
+                for(i =1;i<4;i++){
                     Button[i].classList.remove("Hide")
                 }
-                Button[3].setAttribute('style','background-color:rgba(255, 255, 255, 0.188)');
-                Button[3].textContent="Info"
+                
+                Button[0].textContent="Info"
+                footer.style.zIndex="-1"
+                if(current==Button[1]){home[1].classList.remove("Hide")}
                 open=false;
             }else{
                 background.classList.remove("animateback");
@@ -156,11 +157,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 background.classList.add("animateInfo");
                 gamesect.classList.add("animateInfo");
                 itlies.classList.add("animateInfo");
-                for(i =0;i<3;i++){
+                for(i =1;i<4;i++){
                     Button[i].classList.add("Hide")
                 }
-                Button[3].textContent="Close X"
-                Button[3].setAttribute('style','background-color:rgba(0, 0, 0, 0.188)');
+                Button[0].textContent="Close X"
+                footer.style.zIndex="3"
+                home[1].classList.add("Hide")
                 open=true;
             }
         };
@@ -168,14 +170,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function HoverButton(button){
         current = document.querySelector(".Current")
-            if (button==Button[0] && button!=current) {
+            if (button==Button[1] && button!=current) {
                 for(i=0;i<home.length;i++){
                     home[i].classList.remove("Hide");
                 }
 
                 gamesect.classList.add("Hide");
                 itlies.classList.add("Hide");
-            }else if (button==Button[1] && button!=current) {
+            }else if (button==Button[3] && button!=current) {
 
                 gamesect.classList.remove("Hide");
 
@@ -195,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function OutButton(){
         current = document.querySelector(".Current")
-            if (current==Button[0]) {
+            if (current==Button[1]) {
 
                 for(i=0;i<home.length;i++){
                     home[i].classList.remove("Hide");
@@ -203,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 gamesect.classList.add("Hide");
                 itlies.classList.add("Hide");
-            } else if(current==Button[1]) {
+            } else if(current==Button[3]) {
 
                 gamesect.classList.remove("Hide");
 

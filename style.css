@@ -11,7 +11,7 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-
+    transition: all 0.2s ease-out;
 }
 @font-face {
     font-family: Stara;
@@ -129,18 +129,38 @@
     }
 }
 
+@keyframes startanim{
+    from{
+        width: 2vw;
+        height: 80vh;
+        border-radius: 30px;
+        left: 49vw;
+        top:10vh;
+        
+    }
+
+    to{
+        width: 100vw;
+        height: 100vh;
+        top: 0vh;
+        left: 0vw;
+        
+    }
+}
+
 .animateInfo{
-    animation: transformation  1s ease-out;
+    animation: transformation  0.8s ease-out;
     animation-fill-mode: forwards;
 
 }
 
 .animateback{
-    animation: transformation  1s ease-out;
+    animation: transformation  0.8s ease-out;
     animation-fill-mode: forwards;
     animation-direction: reverse;
 
 }
+
 
 html{height: 100%; overflow: hidden}
 
@@ -162,6 +182,69 @@ body{
   mix-blend-mode: difference;
 }
 
+footer{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    border: 1px red solid;
+    z-index: -1;
+}
+
+
+.leftfoot{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 5vw;
+    top:15vh;
+    height: 70vh;
+    width: 25vw; 
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Eiko;
+    font-variation-settings: "wght" 100;
+    
+}
+
+.rightfoot{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 5vw;
+    top:15vh;
+    height: 70vh;
+    width: 25vw; 
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Eiko;
+    font-variation-settings: "wght" 100;
+    
+}
+.rightfoot a{
+    color: black;
+    text-decoration: none;
+}
+
+.rightfoot a:hover{
+    text-decoration:underline ;
+}
+
+.itch{
+    display: flex;
+    width: 25vw;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+}
+
+.itch img{
+    width: 2vw;
+    height: 2vw;
+}
+
+footer h1:hover,h2:hover{
+    font-variation-settings: "wght" 300;
+}
 .background{
     position: absolute;
     z-index: 1;
@@ -169,6 +252,8 @@ body{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    /* animation: startanim 2s ease-in-out;
+    animation-delay: 5s; */
 
 }
 
@@ -200,6 +285,7 @@ body{
     margin-left: 3vw;
     align-items: center;
     justify-content: center;
+    width: 15vw;
 }
 
 .navigator .Active{
@@ -214,7 +300,14 @@ body{
     z-index: 999;
     
 }
-
+.Home .navigator  button:first-of-type{
+    position: absolute;
+    mix-blend-mode: difference;
+    top: 5vw;
+    width: 5vw;
+    height: 3vw;
+    left: 5vw;
+}
 .Home .navigator button:hover{
     border: 0.1vw solid white;
     font-variation-settings: "wght" 700;
@@ -260,6 +353,7 @@ body{
 }
 
 .name{
+    mix-blend-mode: difference;
     color: white;
     font-size: 0.8vw;
     display: flex;
@@ -271,7 +365,7 @@ body{
     gap: 1vw;
     width: 100%;
     font-variation-settings: "wght" 100;
-    z-index: 1;
+    z-index: 100;
 }
 .name h5{
     align-self: flex-end;
@@ -368,6 +462,7 @@ body{
     width: 100vw;
     height: 100vh;
     color: white;
+    overflow: hidden;
     gap: 3vw;
 }
 .itlies img{
