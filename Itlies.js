@@ -42,7 +42,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".Gameinfo", {
     scrollTrigger: {
         trigger:"#scrolltrigger1",
-        start:"700",
+        start:"800",
         end:"+=900",
     scrub:3},
     y: -500,
@@ -60,7 +60,7 @@ gsap.to(".Data", {
 const text=new SplitType("#flashtext",{types:"chars"});
 gsap.from(text.chars, {
     scrollTrigger: {
-        start:"700",
+        start:"800",
         end:"+=100",
         scrub:3},
     duration: 0.5,
@@ -70,15 +70,6 @@ gsap.from(text.chars, {
     ease: "back.out(1.7)"
 });
 
-gsap.to("#flashtext", {
-    scrollTrigger: {
-        trigger:"#scrolltrigger1",
-        start:"700",
-        end:"+=900",
-        scrub:3},
-
-
-});
 gsap.to(".room", {
     scrollTrigger: {
         trigger:"#scrolltrigger1",
@@ -89,3 +80,37 @@ gsap.to(".room", {
 
 
 });
+gsap.to(options, {
+    scrollTrigger: {
+        trigger:"#scrolltrigger1",
+        start:"800",
+        end:"+=900",
+        scrub:3},
+    y: -500,
+
+});
+
+const itemsContainer = document.querySelector(".items");
+
+// Setting up the horizontal scrolling
+gsap.to(itemsContainer, {
+    x: () => -(itemsContainer.scrollWidth - document.documentElement.clientWidth) + "px", // Calculate the distance to scroll
+    ease: "none", // Use a linear ease for smooth scrolling
+    scrollTrigger: {
+        trigger: itemsContainer,
+        start:"top+=50% center",
+        pin: true, // Pin the items container so it doesn't scroll away
+        scrub: 1, // Link the scroll to the scrubbing of the animation
+        end: () => "+=" + 3000 // End the animation when we've fully scrolled the container
+    }
+});
+var options = {
+    animate: true,
+    patternWidth: 100,
+    patternHeight: 100,
+    grainOpacity: 0.06,
+    grainDensity: 1,
+    grainWidth: 1,
+    grainHeight: 1
+};
+grained("#grain", options);

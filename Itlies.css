@@ -10,7 +10,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    src:url('Grotesque Pro/BasisGrotesquePro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
 *{
     margin: 0;
     padding: 0;
@@ -29,7 +34,18 @@ body{
     font-family: Eiko;
 
 }
+#graincontainer{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
 
+}
+#grain{
+    width: 100vw;
+    height: 100vh;
+
+
+}
 .cursor{
     position: fixed;
     width: 1vw;
@@ -134,3 +150,48 @@ body{
     top:75%;
 
 }
+.Invinfo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: -100px;
+}
+.Invinfo p{
+
+    font-family: "Basis Grotesque Pro";
+    font-size: 40px;
+    text-align: left;
+    width: 90vw;
+    margin-left: 10px;
+    font-weight: 300;
+}
+.Invinfo h1{
+    font-size: 60px;
+    text-align: left;
+    margin-left: 25px;
+    font-weight: 100;
+}
+.items{
+    margin-left: 400px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+    gap:600px;
+    width: 4500px;
+}
+
+#itemholder {
+    overflow-x: hidden;
+}
+
+.inv{
+    display: flex;
+    flex-direction: column;
+    gap:15px
+}
+.inv h1{
+    font-family: 'Basis Grotesque Pro';
+    font-size: 100px;
+}
+
+
