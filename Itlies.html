@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--ANIMATION LIB-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="Gameinfo.js"></script>
+    <script  src="Gameinfo.js"></script>
+
     <link rel="stylesheet" href="Itlies.css">
+    <script src="Itlies.js" defer></script>
+
+
+    
+
 
 </head>
 <body>
+
     <div class="cursor"></div>
 
 
+    <div class="Title">
+        <h1>It Lies In The Dark</h1>
+        <div class="Gamestats">
+            <div class="Gamestats_info">
+                <h3>Date</h3>
+                <p>10/02/2024</p>
+            </div>
+            <div class="Gamestats_info">
+                <h3>Genre</h3>
+                <p>Horror</p>
+            </div>
+            <div class="Gamestats_info">
+                <h3>Made with</h3>
+                <p>Godot</p>
+            </div>
+
+        </div>
+
+    </div>
     <div class="Data">
         <h1 class="Data_text"> Downloads: </h1>
         <h2 class="Data_text" id="download_counter"> 10</h2>
-        <div id="download_bar"></div>
+        <div id="download_bar" class="bar"></div>
         <h1 class="Data_text"> Views: </h1>
         <h2 class="Data_text" id="view_counter"> 10</h2>
-        <div id="view_bar"></div>
+        <div id="view_bar" class="bar"></div>
     </div>
 
-    <div class="flashlightable">
 <div class="Gameinfo">
     <p>Sono, relativamente, nuovo su youtube e mi piace portare tanti giochi diversi e il mio gioco preferito è minecraft.
     ho 14 anni e sono della Sicilia più precisamente di un paesino.
@@ -30,14 +61,27 @@
     Buona permanenza. Per richieste commerciali, contattare l'e-mail: giulio.mangiafico16@gmail.com
 
     </p>
-    <img src=huh.png>
+
+
 </div>
 
-    </div>
+    <div class="room">
+        <div class="flashlightable">
+        <h1 id="flashtext">FLASHLIGHT</h1>
+    <img src=huh.png  id="huh">
+        </div>
 
 
     <img id="bro" src="bro.png">
+    </div>
 
+<div class="candle">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+    </p>
+    <img src="candelas.png">
+
+</div>
 
 </body>
 

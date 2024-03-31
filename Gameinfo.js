@@ -1,4 +1,3 @@
-//we are making it a function so we can use async
 
 async function getdata(){
     //just a precaution
@@ -33,34 +32,12 @@ function load(){
     let view_counter=document.getElementById("view_counter")
     let download_bar= document.getElementById("download_bar");
     let view_bar= document.getElementById("view_bar");
+    gsap.from(".Data_text", { opacity: 0, y: 30, duration: 1 });
+    gsap.fromTo("#download_counter",{opacity: 0, y: 30,}, { opacity: 1, y:0, duration: 1 ,delay:1});
+    gsap.fromTo("#view_counter",{opacity: 0, y: 30,}, { opacity: 1, y:0, duration: 1 ,delay:1});
     setdata();
-    const cursor= document.querySelector('.cursor');
-    let flashlightable= document.querySelector('.flashlightable');
-    let mouseX=0;
-    let mouseY=0;
-    const bro=document.getElementById('bro');
-    const positionElement = (e)=> {
-
-        mouseY = e.clientY;
-        mouseX = e.clientX;
-
-        cursor.style.transform = `translate3d(${mouseX-10}px, ${mouseY-5}px, 0)`;
-        //if stuff
 
 
-        flashlightable.style.webkitMaskImage = `radial-gradient(circle at ${mouseX/window.innerWidth*100}% ${mouseY/window.innerHeight*100}%, black -10%, transparent 30%)`;
-
-// And set the mask-image property
-        flashlightable.style.maskImage = `radial-gradient(circle at ${mouseX/window.innerWidth*100}% ${mouseY/window.innerHeight*100}%, black 0%, transparent 40%)`;
-    }
-
-
-    function removebro(){
-        bro.classList.add("animate_adios")
-        bro.opacity="0";
-    }
-    window.addEventListener('mousemove', positionElement);
-    bro.addEventListener("mouseover",removebro)
 }
 
 function setdata(){
@@ -68,18 +45,27 @@ function setdata(){
         function(data){
 
             //this somehow works
-            download_counter.textContent=data[0];
+            if (download_counter.textContent!=data[0] && download_counter.textContent!=10){
+                gsap.fromTo("#download_counter",{opacity:1,y:0}, { opacity: 0, y: -30, duration: 0.5 });
 
-            view_counter.textContent=data[1];
+                gsap.fromTo("#download_counter",{opacity: 0, y: 30,}, { opacity: 1, y:0, duration: 1 ,delay:1});
+            }
+            if (view_counter.textContent!=data[1] && view_counter.textContent!=10) {
+                gsap.fromTo("#view_counter",{opacity:1,y:0}, { opacity: 0, y: -30, duration: 0.5 });
+
+                gsap.fromTo("#view_counter",{opacity: 0, y: 30,}, { opacity: 1, y:0, duration: 1 ,delay:1})
+            }
+            download_counter.textContent=data[0];
+            view_counter.textContent = data[1];
             //max downloads
             let downloadbound=100;
             //max views
             let view_bound=400;
 
-            let ratio=(data[0]/downloadbound)*90;
-            download_bar.style.width=ratio.toString()+"vh";
+            let ratio=(data[0]/downloadbound)*70;
+            download_bar.style.width=ratio.toString()+"vw";
             ratio=(data[1]/view_bound)*90;
-            view_bar.style.width=ratio.toString()+"vh";
+            view_bar.style.width=ratio.toString()+"vw";
 
         }
     )

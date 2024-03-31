@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Eiko';
+    src:url('Eiko/PPEiko-Variable.ttf') format("truetype-variations");
+    font-weight: 100;
+
+}
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    src:url('Grotesque Pro/BasisGrotesquePro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +19,7 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    color:white;
 }
 body{
     background-color: black;
@@ -13,22 +27,6 @@ body{
     display: flex;
     flex-direction: column;
     font-family: Eiko;
-
-}
-@keyframes adios {
-    from{
-        scale:100%;
-        opacity: 100;
-    }
-    to{
-        scale:0;
-        opacity: 0;
-    }
-}
-.animate_adios{
-    animation: adios  0.8s ease-out;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
 
 }
 
@@ -42,44 +40,97 @@ body{
     z-index: 3;
     mix-blend-mode: difference;
 }
+.Title{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    margin-bottom: 40px;
 
+}
+.Title h1{
+    font-size: 100px;
+    display: flex;
+    align-self: flex-start;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.Gamestats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Title h3{
+
+    font-size: 25px;
+
+}
+.Title p{
+    font-size: 20px;
+    opacity: 50%;
+}
 
 .Data{
     display: flex;
     flex-direction: column;
     margin-bottom: 10vh;
+    margin-left: 40px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.Data_text{
+    color: white;
+
+
+}
+
+#download_counter{
+    opacity: 0;
+}
+#view_counter{
+    opacity: 0;
+}
+
+.bar{
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    height: 5vh;
+    width: 0vw;
+    transition: width 500ms ease-in-out;
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
 }
 .Gameinfo{
     color: white;
+    font-family: "Basis Grotesque Pro";
+    font-size: 40px;
+    text-align: left;
+    width: 70vw;
 }
-.Data_text{
-    color: white;
+#flashtext{
+    font-size: 200px;
+    font-family: 'Basis Grotesque Pro';
 }
-#download_bar{
-    border-radius: 15px;
-    background-color: red;
-    height: 5vh;
-    width: 90vh;
-    margin: auto;
-    transition: width 330ms ease-in-out;
-    animation-timing-function: cubic-bezier(1.000, 0.010, 1.000, 0.045);
+.room{
+    position: relative;
+    width: 98vw;
+    height: 100vh;
+    margin-bottom: 300px;
 }
-#view_bar{
+#huh{
+    object-fit: cover;
+    width: 98vw;
+    height: 100vh;
 
-    border-radius: 15px;
-    background-color: red;
-    height: 5vh;
-    width: 90vh;
-    margin: auto;
-    transition: width 330ms ease-in-out;
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
 }
 #bro{
     position: absolute;
-    top:800px;
-    right: 650px;
+    object-fit: cover;
     width: 30vw;
     height: 30vh;
-
+    right: 32%;
+    top:75%;
 
 }
