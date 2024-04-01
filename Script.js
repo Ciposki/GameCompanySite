@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 for(i =1;i<4;i++){
                     Button[i].classList.add("Hide")
                 }
-                Button[0].textContent="Close X"
+                Button[0].textContent="Close"
                 footer.style.zIndex="3"
                 home[1].classList.add("Hide")
                 open=true;

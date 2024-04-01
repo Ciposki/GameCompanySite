@@ -194,7 +194,6 @@ footer{
     position: absolute;
     width: 100vw;
     height: 100vh;
-    border: 1px red solid;
     z-index: -1;
 }
 
@@ -303,6 +302,7 @@ footer h1:hover,h2:hover{
     background-color: rgba(255, 255, 255, 0.188);
     color: white;
     font-family: Eiko;
+    font-size: 1vw;
     font-variation-settings: "wght" 200;
     border-style:none;
     z-index: 999;
@@ -325,6 +325,7 @@ footer h1:hover,h2:hover{
 .Home .navigator .Current{
     border-radius: 30px;
     height: 3vw;
+    font-size: 1vw;
     width: 10vw;
     background-color: rgba(28, 28, 28, 0.188);
     color: white;
@@ -386,7 +387,7 @@ footer h1:hover,h2:hover{
     width: 40vw;
     margin-top: 20vh;
     text-shadow: 2px 2px 4px #000000;
-    font-size: 4vw;
+    font-size: 3vw;
     z-index:1;
 }
 
