@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
         element.addEventListener("mouseover", () => {
             if (!element.classList.contains("Hide") && !open){
             HoverButton(element);
+            cursor.style.width="0px"
+                cursor.style.height="0px"
+
             cursor.setAttribute('style','background-color:transparent');
             cursor.style.border = "3px solid white";
             cursor.style.width = "1.5vw"

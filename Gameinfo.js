@@ -1,4 +1,3 @@
-//we are making it a function so we can use async
 
 async function getdata(){
     //just a precaution
@@ -27,33 +26,53 @@ async function getdata(){
         }
     }
 }
+
+function load(){
+    let download_counter=document.getElementById("download_counter")
+    let view_counter=document.getElementById("view_counter")
+    let download_bar= document.getElementById("download_bar");
+    let view_bar= document.getElementById("view_bar");
+    gsap.from(".Data_text", { opacity: 0, y: 30, duration: 1 });
+    gsap.fromTo("#download_counter",{opacity: 0, y: 30,}, { opacity: 1, y:0, duration: 1 ,delay:1});
+    gsap.fromTo("#view_counter",{opacity: 0, y: 30,}, { opacity: 1, y:0, duration: 1 ,delay:1});
+    setdata();
+
+
+}
+
 function setdata(){
     getdata().then(
         function(data){
 
-            let download_counter=document.getElementById("download_counter")
+            //this somehow works
+            if (download_counter.textContent!=data[0] && download_counter.textContent!=10){
+                gsap.fromTo("#download_counter",{opacity:1,y:0}, { opacity: 0, y: -30, duration: 0.5 });
+
+                gsap.fromTo("#download_counter",{opacity: 0, y: 30,}, { opacity: 1, y:0, duration: 1 ,delay:1});
+            }
+            if (view_counter.textContent!=data[1] && view_counter.textContent!=10) {
+                gsap.fromTo("#view_counter",{opacity:1,y:0}, { opacity: 0, y: -30, duration: 0.5 });
+
+                gsap.fromTo("#view_counter",{opacity: 0, y: 30,}, { opacity: 1, y:0, duration: 1 ,delay:1})
+            }
             download_counter.textContent=data[0];
-            let view_counter=document.getElementById("view_counter")
-            view_counter.textContent=data[1];
+            view_counter.textContent = data[1];
             //max downloads
             let downloadbound=100;
             //max views
             let view_bound=400;
-            let download_bar= document.getElementById("download_bar");
-            let view_bar= document.getElementById("view_bar");
-            let ratio=(data[0]/downloadbound)*90;
-            download_bar.style.width=ratio.toString()+"vh";
+
+            let ratio=(data[0]/downloadbound)*70;
+            download_bar.style.width=ratio.toString()+"vw";
             ratio=(data[1]/view_bound)*90;
-            view_bar.style.width=ratio.toString()+"vh";
+            view_bar.style.width=ratio.toString()+"vw";
 
         }
     )
 }
+
 //after the page loads
-document.addEventListener('DOMContentLoaded',setdata);
+document.addEventListener('DOMContentLoaded',load);
 //every 2 seconds
 setInterval(setdata, 2000);
-function set_flash(){
-    const cursor= document.querySelector('.cursor');
 
-}
