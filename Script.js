@@ -29,18 +29,18 @@ async function getdata(){
 
 
 window.addEventListener("load", function(){
+    let tl = gsap.timeline(); 
     const background = document.querySelector(".background");
     // const background = document.querySelector(".background");
-    gsap.to(".loader",{
+    tl.to(".loader",{
         x:-this.window.screen.width,
         duration:2,
         ease:"expo.in"
     })
-    gsap.to(".Home",{
+    .to(".Home",{
         opacity:100,
-        delay:5,
-        
-        
+        duration:1000,
+        zIndex:999
     })
 
     console.log("loaded");
