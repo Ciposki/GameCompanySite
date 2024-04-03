@@ -147,6 +147,19 @@
         
     }
 }
+@keyframes goleft {
+    from{
+        left:0vw;
+    }
+    to{
+        left:101vw;
+    }
+}
+.goleft{
+    animation: goleft 2s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
 
 .animateInfo{
     animation: transformation  0.8s ease-out;

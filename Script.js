@@ -25,8 +25,8 @@ async function getdata(){
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
+
     const Button = document.querySelectorAll("button");
     const home = document.querySelectorAll("#home");
     const gamesect= document.querySelector(".gameSection");
@@ -134,9 +134,14 @@ document.addEventListener('DOMContentLoaded', function() {
             gamesect.classList.add("Hide");
             itlies.classList.add("Hide")
         }else if(buttons == Button[2]&& open == false){
-
             console.log("sium");
-
+            gsap.to(Button,{xPercent: -300,delay:0,duration:3,ease: "sine.inOut",})
+            gsap.to(".name",{yPercent: -200,delay:0.5,duration:3,ease: "sine.inOut",})
+            gsap.to(".title",{xPercent: 600,delay:1,duration:3,ease: "sine.inOut",})
+            gsap.to(".video",{xPercent: 600,delay:1.5,duration:3,ease: "sine.inOut",})
+            gsap.to(".counter",{xPercent: 600,delay:2,duration:3,ease: "sine.inOut",})
+            gsap.to(itlies,{backgroundColor:"black",delay:2.5,duration:3,ease: "sine.inOut",})
+            gsap.delayedCall(7.5,newpage)
             for(i=0;i<home.length;i++){
                 if(!home[i].classList.contains("Hide")){
                     home[i].classList.add("Hide");
@@ -145,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             gamesect.classList.add("Hide");
             itlies.classList.remove("Hide");
+            move.classList.add("goleft")
 
 
         }else if(buttons==Button[0]){
@@ -206,11 +212,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }else if (button==Button[2] && button!=current) {
                 itlies.classList.remove("Hide");
                 console.log("help")
-                gsap.to(".navigator", {
-                    xPercent: -100,
-                    ease: "power4.inOut",
-                    duration:10
-                });
                 gamesect.classList.add("Hide");
                 for(i=0;i<home.length;i++){
                     home[i].classList.add("Hide");
@@ -248,3 +249,6 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
 });
+function newpage(){
+    //huh
+}
