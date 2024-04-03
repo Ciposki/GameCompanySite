@@ -253,9 +253,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function newpage(){
 //fix link
-    window.location.href = 'C:/Users/admin/Desktop/GameCompanySite/Itlies.html';
-    window.location.assign = 'C:/Users/admin/Desktop/GameCompanySite/Itlies.html';
+    window.location.href = 'Itlies.html';
+    window.location.assign = 'Itlies.html';
 
-    window.location.replace = 'C:/Users/admin/Desktop/GameCompanySite/Itlies.html';
+    window.location.replace = 'Itlies.html';
 
 }
