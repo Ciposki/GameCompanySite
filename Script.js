@@ -99,6 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function buttonclick(buttons){
+
+
         if(buttons!=Button[0] && open == false){
                 open=false;
             Button.forEach(buttonElement => {
@@ -132,6 +134,9 @@ document.addEventListener('DOMContentLoaded', function() {
             gamesect.classList.add("Hide");
             itlies.classList.add("Hide")
         }else if(buttons == Button[2]&& open == false){
+
+            console.log("sium");
+
             for(i=0;i<home.length;i++){
                 if(!home[i].classList.contains("Hide")){
                     home[i].classList.add("Hide");
@@ -140,6 +145,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             gamesect.classList.add("Hide");
             itlies.classList.remove("Hide");
+
+
         }else if(buttons==Button[0]){
             if(open){
                 background.classList.remove("animateInfo");
@@ -149,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 background.classList.add("animateback");
                 gamesect.classList.add("animateback");
                 itlies.classList.add("animateback");
+
                 // Da cambiare con la gerarchia
                 for(i =1;i<4;i++){
                     Button[i].classList.remove("Hide")
@@ -162,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 background.classList.remove("animateback");
                 gamesect.classList.remove("animateback");
                 itlies.classList.remove("animateback");
+
                 void background.offsetWidth;
                 background.classList.add("animateInfo");
                 gamesect.classList.add("animateInfo");
@@ -196,7 +205,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }else if (button==Button[2] && button!=current) {
                 itlies.classList.remove("Hide");
-
+                console.log("help")
+                gsap.to(".navigator", {
+                    xPercent: -100,
+                    ease: "power4.inOut",
+                    duration:10
+                });
                 gamesect.classList.add("Hide");
                 for(i=0;i<home.length;i++){
                     home[i].classList.add("Hide");
@@ -224,6 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }else if(current==Button[2]){
                 itlies.classList.remove("Hide");
+
 
                 gamesect.classList.add("Hide");
                 for(i=0;i<home.length;i++){
