@@ -5,6 +5,7 @@ const cursor= document.querySelector('.cursor');
 let flashlightable= document.querySelector('.flashlightable');
 let mouseX=0;
 let mouseY=0;
+let tmp=false;
 const positionElement = (e)=> {
 
     mouseY = e.clientY;
@@ -18,6 +19,15 @@ const positionElement = (e)=> {
 
 // And set the mask-image property
     flashlightable.style.maskImage = `radial-gradient(circle at ${mouseX/window.innerWidth*100}% ${mouseY/window.innerHeight*100}%, black 0%, transparent 40%)`;
+    if (tmp==false){
+        tmp=true;
+        gsap.to(".cursor", {
+            scale: 1,
+            ease: "power4.inOut",
+            duration: 0,
+        });
+
+    }
 }
 
 
@@ -117,7 +127,15 @@ grained("#grain", options);
 
 
 //Start animations
-
+gsap.from(".name", {
+    opacity: 0,
+    ease: "power4.inOut",
+    duration: 2,
+});
+gsap.to(".cursor", {
+    scale: 0,
+    duration: 0,
+});
 gsap.from("#Title", {
     duration: 1,
     opacity: 0,

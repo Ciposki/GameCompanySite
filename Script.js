@@ -140,7 +140,9 @@ document.addEventListener('DOMContentLoaded', function() {
             gsap.to(".title",{xPercent: 600,delay:1,duration:3,ease: "sine.inOut",})
             gsap.to(".video",{xPercent: 600,delay:1.5,duration:3,ease: "sine.inOut",})
             gsap.to(".counter",{xPercent: 600,delay:2,duration:3,ease: "sine.inOut",})
+
             gsap.to(itlies,{backgroundColor:"black",delay:2.5,duration:3,ease: "sine.inOut",})
+            gsap.to(cursor,{scale:0,delay:3,duration:2,ease: "sine.inOut",})
             gsap.delayedCall(7.5,newpage)
             for(i=0;i<home.length;i++){
                 if(!home[i].classList.contains("Hide")){
@@ -250,5 +252,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 function newpage(){
-    //huh
+//fix link
+    window.location.href = 'C:/Users/admin/Desktop/GameCompanySite/Itlies.html';
+    window.location.assign = 'C:/Users/admin/Desktop/GameCompanySite/Itlies.html';
+
+    window.location.replace = 'C:/Users/admin/Desktop/GameCompanySite/Itlies.html';
+
 }
