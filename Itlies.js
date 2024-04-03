@@ -108,9 +108,39 @@ var options = {
     animate: true,
     patternWidth: 100,
     patternHeight: 100,
-    grainOpacity: 0.06,
+    grainOpacity: 0.1,
     grainDensity: 1,
     grainWidth: 1,
     grainHeight: 1
 };
 grained("#grain", options);
+
+
+//Start animations
+
+gsap.from("#Title", {
+    duration: 1,
+    opacity: 0,
+    xPercent: -100,
+    ease: "power4.inOut",
+    delay:1
+});
+gsap.from(".Gamestats", {
+    duration: 2,
+    opacity: 0,
+    ease: "power4.inOut",
+    delay:3
+})
+gsap.from(".Gameinfo", {
+    duration: 1,
+    opacity: 0,
+    yPercent: 100,
+    ease: "power4.inOut",
+    delay:4
+});
+
+gsap.from("#grain", {
+    scaleY: 0,
+    ease: "power4.inOut",
+    delay:2
+});

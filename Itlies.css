@@ -39,10 +39,12 @@ body{
     height: 100vh;
     position: fixed;
 
+
 }
 #grain{
     width: 100vw;
     height: 100vh;
+
 
 
 }
@@ -56,6 +58,29 @@ body{
     z-index: 3;
     mix-blend-mode: difference;
 }
+
+
+
+.name{
+
+    mix-blend-mode: difference;
+    color: white;
+    font-size: 0.8vw;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    margin-top: 25px;
+    justify-content: center;
+    align-content: center;
+    gap: 1vw;
+    width: 100%;
+    font-variation-settings: "wght" 100;
+    z-index: 100;
+}
+.name h5{
+    align-self: flex-end;
+}
+
 .Title{
     display: flex;
     flex-direction: column;
@@ -172,12 +197,12 @@ body{
     font-weight: 100;
 }
 .items{
-    margin-left: 400px;
+    margin-left: 100vw;
     display: flex;
     flex-direction: row;
     align-content: space-evenly;
     gap:600px;
-    width: 4500px;
+    width: 6000px;
 }
 
 #itemholder {
@@ -192,6 +217,7 @@ body{
 .inv h1{
     font-family: 'Basis Grotesque Pro';
     font-size: 100px;
+    color: #FBF3D5;
 }
 
 

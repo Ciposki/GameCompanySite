@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/split-type"></script>
     <!--GRAIN LIB-->
     <script src="https://cdn.jsdelivr.net/npm/grained@0.0.2/grained.min.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.91/build/spline-viewer.js"></script>
 
 
 
@@ -27,11 +28,17 @@
 
     <div class="cursor"></div>
     <div id="graincontainer">
-        <div id="grain"></div>
+        <div id="grain">
+
+        </div>
+    </div>
+    <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/t6ocms5J2HVapZye/scene.splinecode"></spline-viewer>
+    <div class="name">
+        <h1>Lupus In Fabula</h1>
     </div>
 
     <div class="Title">
-        <h1>It Lies In The Dark</h1>
+        <h1 id="Title">It Lies In The Dark</h1>
         <div class="Gamestats">
             <div class="Gamestats_info">
                 <h3>Date</h3>
@@ -73,7 +80,7 @@
 
     <div class="room">
         <div class="flashlightable">
-        <h1 id="flashtext">FLASHLIGHT</h1>
+        <h1 id="flashtext">FLASH</h1>
     <img src=huh.png  id="huh">
         </div>
 
