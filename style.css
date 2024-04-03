@@ -144,7 +144,6 @@
         height: 100vh;
         top: 0vh;
         left: 0vw;
-        
     }
 }
 @keyframes goleft {
@@ -176,10 +175,10 @@
 }
 
 .animateonce{
-    animation: startanim  3s ease-out;
+    animation: startanim  5s ease-out;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
-    animation-delay: 5s;
+    animation-delay: 1s;
 }
 
 
@@ -193,7 +192,22 @@ body{
     font-family: Eiko;
 
 }
+.loader{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
 
+.loader img{
+    width: 5vw;
+}
 .cursor{
   width: 1vw;
   height: 1vw;
@@ -296,7 +310,7 @@ footer h1:hover,h2:hover{
     display: flex;
     height: 90vh;
     width: 100%;
-
+    opacity: 0;
 }
 
 .navigator{

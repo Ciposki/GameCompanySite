@@ -25,13 +25,34 @@ async function getdata(){
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
 
+
+
+window.addEventListener("load", function(){
+    const background = document.querySelector(".background");
+    // const background = document.querySelector(".background");
+    gsap.to(".loader",{
+        x:-this.window.screen.width,
+        duration:2,
+        ease:"expo.in"
+    })
+    gsap.to(".Home",{
+        opacity:100,
+        delay:5,
+        
+        
+    })
+
+    console.log("loaded");
+    background.classList.add("animateonce")
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    const background = document.querySelector(".background");
     const Button = document.querySelectorAll("button");
     const home = document.querySelectorAll("#home");
     const gamesect= document.querySelector(".gameSection");
     const itlies = document.querySelector(".itlies");
-    const background = document.querySelector(".background");
     const cursor= document.querySelector('.cursor');
     const footer = document.querySelector('footer');
 
