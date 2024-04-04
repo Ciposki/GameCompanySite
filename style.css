@@ -265,6 +265,7 @@ footer h1:hover,h2:hover{
     left: 49vw;
     top:10vh;
     overflow: hidden;
+    background-color: #000814;
     /* animation: startanim 2s ease-in-out;
     animation-delay: 5s; */
 
@@ -316,7 +317,6 @@ footer h1:hover,h2:hover{
 }
 .Home .navigator  button:first-of-type{
     position: absolute;
-    mix-blend-mode: difference;
     top: 5vw;
     width: 5vw;
     height: 3vw;

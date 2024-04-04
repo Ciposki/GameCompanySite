@@ -43,12 +43,12 @@ window.addEventListener("load", function(){
         left:0,
         duration:3,
         borderRadius:0,
-        ease: "expoScale(0.5,7,none)"
+        ease: "expoScale(0.5,7,none)",
+        zIndex:"-1"
     })
     .to(".Home",{
         opacity:1,
         duration:3,
-        zIndex:999,
 
     }).to("footer",{
         opacity:1
@@ -202,6 +202,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 Button[0].textContent="Info"
+                Button[0].style.color="white"
+                Button[0].style.border="none"
                 footer.style.zIndex="-1"
                 if(current==Button[1]){home[1].classList.remove("Hide")}
                 open=false;
@@ -218,7 +220,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     Button[i].classList.add("Hide")
                 }
                 Button[0].textContent="Close"
-                footer.style.zIndex="1000"
+                footer.style.zIndex="3"
+                Button[0].style.color="black"
+                Button[0].style.border="0.1vw solid black"
                 home[1].classList.add("Hide")
                 open=true;
             }
