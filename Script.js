@@ -36,15 +36,25 @@ window.addEventListener("load", function(){
         x:-this.window.screen.width,
         duration:2,
         ease:"expo.in"
+    }).to(".background",{
+        width:"100vw",
+        height:"100vh",
+        top:0,
+        left:0,
+        duration:3,
+        borderRadius:0,
+        ease: "expoScale(0.5,7,none)"
     })
     .to(".Home",{
-        opacity:100,
-        duration:1000,
-        zIndex:999
+        opacity:1,
+        duration:3,
+        zIndex:999,
+
+    }).to("footer",{
+        opacity:1
     })
 
     console.log("loaded");
-    background.classList.add("animateonce")
 })
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -208,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     Button[i].classList.add("Hide")
                 }
                 Button[0].textContent="Close"
-                footer.style.zIndex="3"
+                footer.style.zIndex="1000"
                 home[1].classList.add("Hide")
                 open=true;
             }

@@ -129,23 +129,6 @@
     }
 }
 
-@keyframes startanim{
-    from{
-        width: 2vw;
-        height: 80vh;
-        border-radius: 30px;
-        left: 49vw;
-        top:10vh;
-        
-    }
-
-    to{
-        width: 100vw;
-        height: 100vh;
-        top: 0vh;
-        left: 0vw;
-    }
-}
 @keyframes goleft {
     from{
         left:0vw;
@@ -173,14 +156,6 @@
     animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
 
 }
-
-.animateonce{
-    animation: startanim  5s ease-out;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
-    animation-delay: 1s;
-}
-
 
 html{height: 100%; overflow: hidden}
 
@@ -223,6 +198,7 @@ footer{
     width: 100vw;
     height: 100vh;
     z-index: -1;
+    opacity: 0;
 }
 
 
@@ -283,9 +259,11 @@ footer h1:hover,h2:hover{
 .background{
     position: absolute;
     z-index: 1;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
+    width: 2vw;
+    height: 80vh;
+    border-radius: 30px;
+    left: 49vw;
+    top:10vh;
     overflow: hidden;
     /* animation: startanim 2s ease-in-out;
     animation-delay: 5s; */
