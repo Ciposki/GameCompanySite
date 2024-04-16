@@ -146,9 +146,10 @@ body{
     animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
 }
 .Gameinfo{
+    margin-left: 35px;
     color: white;
     font-family: "Basis Grotesque Pro";
-    font-size: 40px;
+    font-size: 35px;
     text-align: left;
     width: 70vw;
 }
@@ -181,7 +182,6 @@ body{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    border: 1px solid red;
     margin-bottom: 30px;
     margin-top: -100px;
     flex-wrap: wrap;
@@ -193,7 +193,7 @@ body{
     font-size: 40px;
     text-align: left;
     width: 90vw;
-    margin-left: 10px;
+    margin-left: 25px;
     font-weight: 300;
 }
 .Invinfo h1{
@@ -227,5 +227,7 @@ body{
     font-size: 5vw;
     color: #FBF3D5;
 }
-
+.sbronza h1{
+    margin-bottom: 20px;
+}
 

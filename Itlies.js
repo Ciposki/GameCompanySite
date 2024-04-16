@@ -55,7 +55,7 @@ gsap.to(".Gameinfo", {
         start:"800",
         end:"+=900",
     scrub:3},
-    y: -500,
+    x: -1500,
 
 });
 gsap.to(".Data", {
