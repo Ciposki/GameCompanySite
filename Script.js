@@ -49,7 +49,7 @@ window.addEventListener("load", function(){
     .to(".Home",{
         opacity:1,
         duration:3,
-
+        zIndex:"3"
     }).to("footer",{
         opacity:1
     })
@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const background = document.querySelector(".background");
     const Button = document.querySelectorAll("button");
     const home = document.querySelectorAll("#home");
-    const gamesect= document.querySelector(".gameSection");
     const itlies = document.querySelector(".itlies");
     const cursor= document.querySelector('.cursor');
     const footer = document.querySelector('footer');
@@ -146,23 +145,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         current = document.querySelector(".Current")
-        if (buttons == Button[3]&& open == false){
-            for(i=0;i<home.length;i++){
-                if(!home[i].classList.contains("Hide")){
-                    home[i].classList.add("Hide");
-                }
-            }
-            gamesect.classList.remove("Hide");
-            itlies.classList.add("Hide")
-
-        }else if(buttons == Button[1]&& open == false){
+        if(buttons == Button[1]&& open == false){
             for(i=0;i<home.length;i++){
                 if(home[i].classList.contains("Hide")){
                     home[i].classList.remove("Hide");
 
                 }
             }
-            gamesect.classList.add("Hide");
+            
             itlies.classList.add("Hide")
         }else if(buttons == Button[2]&& open == false){
             console.log("sium");
@@ -181,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 }
             }
-            gamesect.classList.add("Hide");
+           
             itlies.classList.remove("Hide");
             move.classList.add("goleft")
 
@@ -189,11 +179,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }else if(buttons==Button[0]){
             if(open){
                 background.classList.remove("animateInfo");
-                gamesect.classList.remove("animateInfo");
                 itlies.classList.remove("animateInfo");
                 void background.offsetWidth;
                 background.classList.add("animateback");
-                gamesect.classList.add("animateback");
+                
                 itlies.classList.add("animateback");
 
                 // Da cambiare con la gerarchia
@@ -209,12 +198,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 open=false;
             }else{
                 background.classList.remove("animateback");
-                gamesect.classList.remove("animateback");
+                
                 itlies.classList.remove("animateback");
 
                 void background.offsetWidth;
                 background.classList.add("animateInfo");
-                gamesect.classList.add("animateInfo");
+                
                 itlies.classList.add("animateInfo");
                 for(i =1;i<4;i++){
                     Button[i].classList.add("Hide")
@@ -236,20 +225,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     home[i].classList.remove("Hide");
                 }
 
-                gamesect.classList.add("Hide");
+                
                 itlies.classList.add("Hide");
-            }else if (button==Button[3] && button!=current) {
-
-                gamesect.classList.remove("Hide");
-
-                itlies.classList.add("Hide");
-                for(i=0;i<home.length;i++){
-                    home[i].classList.add("Hide");
-                }
-            }else if (button==Button[2] && button!=current) {
+            }
+            else if (button==Button[2] && button!=current) {
                 itlies.classList.remove("Hide");
                 console.log("help")
-                gamesect.classList.add("Hide");
+                
                 for(i=0;i<home.length;i++){
                     home[i].classList.add("Hide");
                 }
@@ -264,21 +246,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     home[i].classList.remove("Hide");
                 }
 
-                gamesect.classList.add("Hide");
+                
                 itlies.classList.add("Hide");
-            } else if(current==Button[3]) {
-
-                gamesect.classList.remove("Hide");
-
-                itlies.classList.add("Hide");
-                for(i=0;i<home.length;i++){
-                    home[i].classList.add("Hide");
-                }
             }else if(current==Button[2]){
                 itlies.classList.remove("Hide");
 
 
-                gamesect.classList.add("Hide");
+                
                 for(i=0;i<home.length;i++){
                     home[i].classList.add("Hide");
                 }
